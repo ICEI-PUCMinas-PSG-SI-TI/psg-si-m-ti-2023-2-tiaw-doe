@@ -1,17 +1,19 @@
-# Nome do projeto
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+DOE
+Doe é um site que faz a conexão de pessoas que querem doar sangue com hemocentros e outras pessoas que precisam de doação.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* ANA LAURA ROCHA DE SOUZA
+* CAMILA STÉFANY DOS SANTOS DE JESUS
+* GABRIEL ALVES AZEVEDO
+* ISADORA MARIA XAVIER GONÇALVES
+* LAURA RESENDE GABRICH
+* LIVIA RESENDE GABRICH
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Rommel Vieira Carneiro
+* Pedro Felipe Oliveira
 
 ## Instruções de utilização
 
