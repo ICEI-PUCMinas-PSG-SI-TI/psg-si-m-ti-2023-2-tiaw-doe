@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe</title>
+    <link rel="stylesheet" href="esqueleto_aside.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="imagem/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <section id="container_main">
+            <!--Insira dentro do aside o que for ficar ao lado esquerdo da tela-->
+            <aside id="info">
+                <a href="index.html"><img src="LOGO-COLORIDO.png" id="logo"></a>
+                <div id="user_perfil">
+                    <img src="user_photo.png" id="user_photo">
+                    <h1>Nome Usuário</h1>
+                </div>
+                <section id="functions">
+                    <div class="fun">
+                        <i class="fa-solid fa-user"></i>
+                        <a href=""><h1>Perfil</h1></a>
+                    </div>
+                    <div class="fun">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        <a href=""><h1>Agendar Doação</h1></a>
+                    </div>
+                    <div class="fun">
+                        <i class="fa-solid fa-message"></i>
+                        <a href=""></a><h1>Pedir Doação</h1></a>
+                    </div>
+                    <div class="fun">
+                        <i class="fa-solid fa-gear"></i>
+                        <a href=""><h1>Configurações</h1></a>
+                    </div>
+                    <div class="fun">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <a href=""><h1>Sair</h1></a>
+                    </div>
+                </section>
+            </aside>
+            <!--Insira dentro da section o que for ficar ao lado direito da tela-->
+            <section id="user_infor">
+                <div class="pedir">
+                    <div class="aside_direito">
+                        <div class="sair">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <h1>Pedir doação</h1>
+                        </div>
+                        <form id="myForm">
+                            <section id="flex">
+                                <div class="file">
+                                    <i class="fa-solid fa-right-from-bracket fa-rotate-270"></i>
+                                    <p>Solte a sua foto aqui <br> - OU -</p>
+                                    <input type="file" id="imagem" name="imagem" class="file1" accept=".jpg, .jpeg">
+                                    <label for="imagem" class="file_label">
+                                        <span>Selecione o arquivo</span>
+                                    </label>
+                                </div>
+                                <div class="direito">
+                                    <div class="d-flex">
+                                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                                        <select id="tipo_sangue" name="tipo_sangue">
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                        </select>
+                                    </div>
+                                    <textarea id="descricao" name="descricao" rows="4" cols="50"
+                                        placeholder="Descreva um pouco sobre você, contendo informações como horário e local para recebimento da doação."></textarea>
+                                </div>
+                                
+                            </section>
+
+                            <section class="info_enviar">
+                                <div class="information">
+                                    <h1>Como funciona?</h1>
+                                <p>Faça uma <strong>publicação</strong> contendo uma foto sua, seu <strong>tipo sanguíneo</strong> e uma pequena descrição de como podem <strong>doar sangue para você</strong>, assim seu post irá aparecer na página inicial e pessoas poderão entrar em contato.</p>
+                                </div>
+                                <div class="button-container">
+                                    <input type="button" value="Cancelar" id="cancelar">
+                                    <input type="button" value="Publicar" id="publicar">
+                                </div>
+                            </section>
+                            
+                            
+                                
+                            
+                        </form>
+                        <div id="containerInformacoes" class="containerInformacoes">
+                            <div class="informacoesDiv" id="informacoesDiv" style="display: none;">
+                                <div class="imagemDiv">
+                                    <img id="imagemPublicada" src="" alt="Imagem Publicada">
+                                </div>
+                                <p class="nome">Nome: <span id="nomePublicado"></span></p>
+                                <p class="sangue">Sangue: <span id="tipoSanguePublicado"></span></p>
+                                <p class="descricao">Descrição: <span id="descricaoPublicada"></span></p>
+                            </div>
+                        </div>
+                            
+                    
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <img id="logo" src="LOGO.png">
+        <ul id="info_rodape">
+            <li>Aspectos legais e responsabilidades</li>
+            <li>Política de Privacidade</li>
+            <li>Ouvidoria</li>
+            <li>Desenvolvido pela turma de S.I. 2º Semestre 2023</li>
+        </ul>
+        <section id="redes_sociais">
+            <i id="whatsapp" class="fa-brands fa-whatsapp"></i>
+            <i id="instagram" class="fa-brands fa-instagram"></i>
+            <i id="youtube" class="fa-brands fa-youtube"></i>
+            <i id="facebook" class="fa-brands fa-facebook-f"></i>
+        </section>
+        <div id="endereco_rodape">
+            Rua Walter Ianni, 255 - São Gabriel <br> Belo Horizonte - MG, 31980-110
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
