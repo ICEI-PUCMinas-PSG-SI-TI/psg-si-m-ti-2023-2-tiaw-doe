@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="imagem/icon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div id="flex">
+
+
+        <aside>
+            <aside id="info">
+                <a href="index.html"><img src="img/LOGO-COLORIDO.png" id="logo"></a>
+                <div id="user_perfil">
+                    <img src="img/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" id="user_photo">
+                    <h1>Lara Oliveira</h1>
+                </div>
+                <section id="functions">
+                    <div class="main-container">
+                        <div class="item">
+                            <img src="img/Perfil.jpg" alt="Imagem 1">
+                            <h3>Perfil</h3>
+                        </div>
+                        <div class="item">
+                            <img src="img/Camada_1.jpg" alt="Imagem 2">
+                            <h3 id="negrito">Agendar doação</h3>
+                        </div>
+                        <div class="item">
+                            <img src="img/Camada_1 (2).jpg" alt="Imagem 3">
+                            <h3>Pedir doação</h3>
+                        </div>
+                        <div class="item">
+                            <img src="img/Configurações.jpg" alt="Imagem 4">
+                            <h3>Configurações</h3>
+                        </div>
+                        <div class="item">
+                            <img src="img/Camada_1 (1).jpg" alt="Imagem 5">
+                            <h3>Sair</h3>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </aside>
+        <main>
+            
+                <div class="container">
+                    <div class="form">
+                        <form action="#">
+                            <div class="form-header">
+                                <div class="title">
+                                    <h1> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                        </svg> Agendar doações</h1>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Informações para agendamento</h3>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label for="name">Nome</label>
+                                    <input id="name" type="text" name="name" placeholder="Nome completo" required>
+                                </div>
+                                <div class="input-box">
+                                    <label for="number">Documento de identidade</label>
+                                    <input id="number" type="text" name="number" placeholder="(RG)" required>
+                                </div>
+                                <div class="input-box">
+                                    <label for="text">Hemocentro</label>
+                                    <select name="select" required id="hemocentro">
+                                        <option selected> Hemocentro Belo Horizonte</option>
+                                        <option>Unidade de Coleta- Estação BH</option>
+                                        <option>Unidade de Coleta Hospital Júlia Kubtischek</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <label for="data">Data de nascimento</label>
+                                    <input id="data" type="date" name="data" placeholder="Data" required>
+                                </div>
+                                <div class="input-box">
+                                    <label for="sexo">Sexo</label>
+                                    <select name="select" required id="sexo">
+                                        <option selected>Masculino</option>
+                                        <option>Feminino</option>
+                                        <option>Outro</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <label for="sangue">Tipo sanguíneo</label>
+                                    <select name="select" required id="sangue">
+                                        <option selected>AB+</option>
+                                        <option>AB-</option>
+                                        <option>A+</option>
+                                        <option>A-</option>
+                                        <option>B+</option>
+                                        <option>B-</option>
+                                        <option>O+</option>
+                                        <option>O-</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <label for="data">Selecione a data </label>
+                                    <input id="data1" type="date" name="data" placeholder="Data" required>
+                                </div>
+                                <div class="input-box">
+                                    <label for="hora">Horário</label>
+                                    <input id="hora" type="time" name="time" placeholder="Data" required>
+                                </div>
+                            </div>
+                            <div id="labelcheck">
+                                <input required type="checkbox" id="cbx" style="display: none;">
+                                <label for="cbx" class="check">
+                                    <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                        <path
+                                            d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+                                        </path>
+                                        <polyline points="1 9 7 14 15 4"></polyline>
+                                    </svg>
+                                    <p id="label">Confirmo que as informações acima estão corretas.</p>
+                                </label>
+                            </div>
+                            <div class="continue-button">
+                                <button id="confirmar"><a href="#">Confirmar agendamento</a> </button>
+                            </div>
+                            <div id="container">
+                                <div><img src="img/image.png" alt=""></div>
+                                <div id="texto1">
+                                    <p> Para saber se você pode doar, <a href="#">clique aqui</a>. </p>
+                                    <p>
+                                        Comparecer à unidade com, no mínimo, 15 minutos de antecedência em relação ao
+                                        horário
+                                        agendado.
+                                    </p>
+                                    <p>
+                                        A idade para doação de sangue é entre 16 e 69 anos. Jovens de 16 e 17 anos e
+                                        maiores
+                                        de
+                                        60 anos devem consultar condições.
+                                    </p>
+                                    <p>
+                                        Quem já doou, deve observar o prazo entre doações de sangue. Homens: 60 dias e
+                                        até 4
+                                        vezes por ano; Mulheres: 90 dias e até 3 vezes por ano.
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+           
+        </main>
+
+    </div>
+
+
+    <div id="rodape">
+        
+            <img id="logo" src="img/LOGO.png">
+            <ul id="info_rodape">
+                <li>Aspectos legais e responsabilidades</li>
+                <li>Política de Privacidade</li>
+                <li>Ouvidoria</li>
+                <li>Desenvolvido pela turma de S.I. 2º Semestre 2023</li>
+            </ul>
+            <section id="redes_sociais">
+                <i id="whatsapp" class="fa-brands fa-whatsapp"></i>
+                <i id="instagram" class="fa-brands fa-instagram"></i>
+                <i id="youtube" class="fa-brands fa-youtube"></i>
+                <i id="facebook" class="fa-brands fa-facebook-f"></i>
+            </section>
+            <div id="endereco_rodape">
+                Rua Walter Ianni, 255 - São Gabriel <br> Belo Horizonte - MG, 31980-110
+            </div>
+        
+    </div>
+
+    <script src="app.js"> </script>
+
+</body>
+
+</html>
