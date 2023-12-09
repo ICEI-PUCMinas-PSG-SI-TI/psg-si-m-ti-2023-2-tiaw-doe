@@ -1,5 +1,5 @@
 function leDados() {
-    let strDados = localStorage.getItem('db');
+    let strDados = localStorage.getItem('dbcadastro');
     let objDados = {};
 
     if (strDados) {
@@ -130,7 +130,7 @@ function incluirDados() {
 
 
 function salvaDados(dados) {
-    localStorage.setItem('db', JSON.stringify(dados))
+    localStorage.setItem('dbcadastro', JSON.stringify(dados))
 
     
 

@@ -147,3 +147,26 @@ function alerta() {
     alert("Agendamento realizado com sucesso!");
 }
 
+try {
+    // Obtém os cadastros armazenados no localStorage
+    const cadastrosData = JSON.parse(localStorage.getItem('dbcadastro')) || {};
+    const cadastros = cadastrosData.cadastros || [];
+
+    // Verifica se há pelo menos um cadastro
+    if (cadastros.length > 0) {
+        // Obtém o último cadastro
+        const ultimoCadastro = cadastros[cadastros.length - 1];
+
+        // Obtém o nome do último cadastro
+        const nomeUltimoCadastro = ultimoCadastro.nome;
+        const sobrenomeUltimo=ultimoCadastro.sobrenome;
+
+        // Atualiza o conteúdo da tag <h1> com o nome do último cadastro
+        document.getElementById('user_perfil').querySelector('h1').textContent = nomeUltimoCadastro +" "+sobrenomeUltimo;
+
+    } else {
+        console.log('Nenhum cadastro encontrado.');
+    }
+} catch (error) {
+    console.error('Erro ao obter o último cadastro:', error);
+}
