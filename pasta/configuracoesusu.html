@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-0YCJGAqn3X/yL0mESfTYTo1D2+P6VRDvh7c+ZTpZDHiBqZOpGNRRzgekK/QqzXVu" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assetsconfigusu/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Configuração</title>
+</head>
+
+<body>
+    <aside id="info">
+        <div id="i123"><a href="index.html"><img src="assetsconfigusu/img/logoColorido.png" id="logo"></a></div>
+        <div id="user_perfil">
+            <img src="assetsconfigusu/img/user_photo.png" id="user_photo">
+            <h1 style="font-size: large; font-family: Sora;"> Lara Oliveira</h1>
+        </div>
+        <section id="functions">
+            <div class="main-container">
+                <a href="perfil.html">
+                    <div class="item">
+                        <img src="assetsconfigusu/img/Perfil.png" alt="Imagem 1">
+                        <h3>Perfil</h3>
+                    </div>
+                </a>
+                <a href="agendamentos.html">
+                    <div class="item">
+                        <img src="assetsconfigusu/img/Doação.png" alt="Imagem 2">
+                        <h3 >Agendar doação</h3>
+                    </div>
+                </a>
+                <a href="esqueleto_aside.html">
+                    <div class="item">
+                        <img src="assetsconfigusu/img/Camada_1 (1).png" alt="Imagem 2">
+                        <h3 >Pedir doação</h3>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="item">
+                        <img src="assetsconfigusu/img/Engrenagem.png" alt="Imagem 3">
+                        <h3 id="negrito">Configurações</h3>
+                    </div>
+                </a>
+                <a href="index.html">
+                    <div class="item">
+                        <img src="assetsconfigusu/img/Sair.png" alt="Imagem 4">
+                        <h3>Sair</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </aside>
+    <main>
+        <article>
+            <form action="" class="input-group">
+                <h1> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg> Configurações</h1>
+                <label for="Newmail">Trocar e-mail</label>
+                <input id="Newmail" type="Newmail" name="Newmail" placeholder="Digite o novo e-mail">
+
+                <label for="Newpassword">Trocar senha</label>
+                <input id="Newpassword" type="Newpassword" name="Newpassword" placeholder="Digite a nova senha">
+                <input id="NewconfirmPassword" type="NewconfirmPassword" name="NewconfirmPassword"
+                    placeholder="Confirme a nova senha">                
+
+                
+                <label for="">Exibição</label>
+                    <div class="continue-button">
+                    <button type="button" class="alterarExibicao" onclick="trocarTema('escuro', 0)">Modo Escuro</button>
+                </div>
+                <div class="continue-button">
+                    <button type="button" class="alterarExibicao temaAtivo" onclick="trocarTema('claro', 1)" class="temaAtivo">Modo Claro</button>
+                </div>
+
+                <label for="">Notificações</label>
+                <input class="checkbox" type="checkbox" id="checkboxEmail" value="">
+                <p for="checkboxEmail">Desejo receber E-Mails com campanhas de doação de sangue</p>
+                <input class="checkbox" type="checkbox" id="checkboxWhatsApp" value="">
+                <p for="checkboxWhatsApp">Desejo receber mensagens por WhatsApp sobre minhas doações</p>
+
+                <div class="cancelar">
+                    <button type="reset">Cancelar</button>
+                </div>
+                <div class="continue-button salvar">
+                    <button type="button" id="save" onclick="alterarDados()">Salvar alterações</button>
+                </div>
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        <img id="logo" src="assetsconfigusu/img/logo.png">
+        <ul id="info_rodape">
+            <li>Aspectos legais e responsabilidades</li>
+            <li>Política de Privacidade</li>
+            <li>Ouvidoria</li>
+            <li>Desenvolvido pela turma de S.I. 2º Semestre 2023</li>
+        </ul>
+        <section id="redes_sociais">
+            <i id="whatsapp" class="fa-brands fa-whatsapp"></i>
+            <i id="instagram" class="fa-brands fa-instagram"></i>
+            <i id="youtube" class="fa-brands fa-youtube"></i>
+            <i id="facebook" class="fa-brands fa-facebook-f"></i>
+        </section>
+        <div id="endereco_rodape">
+            Rua Walter Ianni, 255 - São Gabriel <br> Belo Horizonte - MG, 31980-110
+        </div>
+    </footer>
+
+
+    <script src="assetsconfigusu/js/index.js"></script>
+    <script src="./assetsconfigusu/js/temas.js"></script>
+
+
+
+
+</body>
+
+</html>

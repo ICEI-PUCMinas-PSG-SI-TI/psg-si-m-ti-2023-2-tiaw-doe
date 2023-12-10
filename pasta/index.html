@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="imagem/icon.png" type="image/x-icon">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet'/>
+</head>
+
+<body>
+    <header>
+        <section id="inicio">
+            <img id="logo" src="imagem/LOGO.png">
+            <ul id="header">
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="#">SOBRE NÓS</a></li>
+                <li><a href="#">QUEM PODE DOAR?</a></li>
+                <li><a href="agendamentos.html">AGENDAR DOAÇÃO</a></li>
+                <li><a href="esqueleto_aside.html">RECEBER SANGUE</a></li>
+            </ul>
+            <section class="login">
+                <button id="entrar"><a href="login.html">login</a></button>
+                <button id="cadastro" class="clicou"><a href="cadastrousuario.html">cadastre-se</a></button>
+            </section>
+        </section>
+
+    </header>
+    <main>
+        <div class="banner">
+            <section class="banner_text">
+                <h1>Doe sangue, doe vida!</h1>
+                <p>Se você tem mais de 18 anos e quer ajudar outras pessoas, clique no <br>botão abaixo e salve vidas.
+                </p>
+                <button><a href="agendamentos.html">AGENDE A SUA DOAÇÃO</a></button>
+            </section>
+        </div>
+        <section class="donate_container">
+            <section class="donate">
+                <h1 id="tittle">Doações necessárias:</h1>
+                <section class="donate_names">
+                    <div class="hemocentro">
+                        <button>AB+</button>
+                        <div class="name_adress">
+                            <h4>Hemocentro de Belo Horizonte</h4>
+                            <a href="#">ver endereço</a>
+                        </div>
+                    </div>
+                    <div class="hemocentro">
+                        <button>A-</button>
+                        <div class="name_adress">
+                            <h4>Hemocentro de Belo Horizonte</h4>
+                            <a href="#">ver endereço</a>
+                        </div>
+                    </div>
+                    <div class="hemocentro">
+                        <button>AB+</button>
+                        <div class="name_adress">
+                            <h4>Vita Hemoterapia</h4>
+                            <a href="#">ver endereço</a>
+                        </div>
+                    </div>
+                    <div class="hemocentro">
+                        <button>B+</button>
+                        <div class="name_adress">
+                            <h4>Fundação HEMOMINAS</h4>
+                            <a href="#">ver endereço</a>
+                        </div>
+                    </div>
+                    <div class="hemocentro">
+                        <button>O+</button>
+                        <div class="name_adress">
+                            <h4>Fundação HEMOMINAS</h4>
+                            <a href="#">ver endereço</a>
+                        </div>
+                    </div>
+                    <div class="hemocentro">
+                        <button>B+</button>
+                        <div class="name_adress">
+                            <h4>Hemoservice</h4>
+                            <a href="#">ver endereço</a>
+                        </div>
+                    </div>
+                    <div class="hemocentro">
+                        <button>A+</button>
+                        <div class="name_adress">
+                            <h4>Vita Hemoterapia</h4>
+                            <a href="#">ver endereço</a>
+                        </div>
+                    </div>
+                    <div class="hemocentro">
+                        <button>O-</button>
+                        <div class="name_adress">
+                            <h4>Hemoservice</h4>
+                            <a href="#">ver endereço</a>
+                        </div>
+                    </div>
+                    <div class="hemocentro">
+                        <button>O+</button>
+                        <div class="name_adress">
+                            <h4>Hemoservice</h4>
+                            <a href="#">ver endereço</a>
+                        </div>
+                    </div>
+                    
+                </section>
+            </section>
+        </section>
+        <section class="need_donate">
+            <div class="top">
+                <p>Pessoas que <strong>precisam de doação:</strong></p>
+                <button class="NeedShow" onclick="togglePeople()">Visualizar todas</button>
+            </div>
+            <section class="need">
+                <section class="people">
+                </section>
+            </section>
+        </section>
+
+        <section class="mapa">
+           <!-- DIV que receberá o mapa -->
+    <div id="map"></div>
+        </section>
+        
+    </main>
+    <footer>
+        <img id="logo" src="imagem/LOGO.png">
+        <ul id="info_rodape">
+            <li>Aspectos legais e responsabilidades</li>
+            <li>Política de Privacidade</li>
+            <li>Ouvidoria</li>
+            <li>Desenvolvido pela turma de S.I. 2º Semestre 2023</li>
+        </ul>
+        <section id="redes_sociais">
+            <i id="whatsapp" class="fa-brands fa-whatsapp"></i>
+            <i id="instagram" class="fa-brands fa-instagram"></i>
+            <i id="youtube" class="fa-brands fa-youtube"></i>
+            <i id="facebook" class="fa-brands fa-facebook-f"></i>
+        </section>
+        <div id="endereco_rodape">
+            Rua Walter Ianni, 255 - São Gabriel <br> Belo Horizonte - MG, 31980-110
+        </div>
+    </footer>
+
+</body>
+<script src="home.js"></script>
+<script src="esqueleto.js"></script>
+<script src="index.js"></script>
+
+</html>

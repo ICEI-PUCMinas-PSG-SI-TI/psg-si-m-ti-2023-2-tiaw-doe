@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-0YCJGAqn3X/yL0mESfTYTo1D2+P6VRDvh7c+ZTpZDHiBqZOpGNRRzgekK/QqzXVu" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assetsh/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Formulario de Cadastro</title>
+</head>
+<body>
+
+    <header id="inicio">
+        <img id="logo" src="assetsh/img/logo.png">
+        <ul id="header">
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="#">SOBRE NÓS</a></li>
+            <li><a href="#">COMO DOAR</a></li>
+            <li><a href="agendamentos.html">AGENDAR DOAÇÃO</a></li>
+            <li><a href="esqueleto_aside.html">RECEBER SANGUE</a></li>
+            
+        </ul>
+    </header>
+
+    <main>
+    <div  class="container">
+        <div class="form-image">
+            <img src="assetsh/img/imgH.png">
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                </div>
+                <div id="infos">
+                    <p>Cadastre os dados do Hemocêntro</p>
+                </div>
+                <div id="cadastro-form" class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Nome</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Nome do Hemocêntro" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite o e-mail" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        <i class="bi bi-eye" id="btnsenha" onclick="mostrarsenha()"></i>
+                    </div>
+                    <div class="input-box">
+                        <label for="confirmPassword">Confirme sua senha</label>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite novamente" required>
+                        <i class="bi bi-eye" id="btnsenha2" onclick="mostrarsenha2()"></i>
+                    </div>
+                </div>
+                <div class="continue-button">
+                    <button id="cadastro"><a href="hemo.html">Cadastrar </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</main>
+
+<div id="rodape">
+        
+    <img id="logo" src="assetsh/img/logo.png">
+    <ul id="info_rodape">
+        <li>Aspectos legais e responsabilidades</li>
+        <li>Política de Privacidade</li>
+        <li>Ouvidoria</li>
+        <li>Desenvolvido pela turma de S.I. 2º Semestre 2023</li>
+    </ul>
+    <section id="redes_sociais">
+        <i id="whatsapp" class="fa-brands fa-whatsapp"></i>
+        <i id="instagram" class="fa-brands fa-instagram"></i>
+        <i id="youtube" class="fa-brands fa-youtube"></i>
+        <i id="facebook" class="fa-brands fa-facebook-f"></i>
+    </section>
+    <div id="endereco_rodape">
+        Rua Walter Ianni, 255 - São Gabriel <br> Belo Horizonte - MG, 31980-110
+    </div>
+
+</div>
+
+
+
+  
+    
+    
+
+    
+        
+     
+    
+    <script src="assetsh/js/index.js"></script>
+    
+
+</body>
+</html>
