@@ -1,5 +1,5 @@
 function leDados() {
-    let strDados = localStorage.getItem('dbhemocentro');
+    let strDados = localStorage.getItem('dbcadastrohemocentro');
     let objDados = {};
 
     if (strDados) {
@@ -92,8 +92,7 @@ inputFile.addEventListener("change", function (e) {
   }
 });
 
-// Limpa o formulário e exibe a imagem padrão ao iniciar
-limparFormulario();
+
 
 function incluirDados() {
     // Obtém os valores dos campos do formulário
@@ -130,7 +129,7 @@ function incluirDados() {
         salvaDados(objDados);
         alertas();
 
-        imprimeDados();
+        
     } else {
         alert("Por favor, preencha todos os campos do formulário antes de salvar.");
     }
@@ -139,33 +138,13 @@ function incluirDados() {
 
 
 function salvaDados(dados) {
-    localStorage.setItem('dbhemocentro', JSON.stringify(dados))
+    localStorage.setItem('dbcadastrohemocentro', JSON.stringify(dados))
 
 
 
 }
 
 
-
-
-
-
-
-function limparFormulario() {
-    // Limpa os valores dos campos do formulário
-    document.getElementById('biografia').value = '';
-    document.getElementById('firstname').value = '';
-    document.getElementById('lastname').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('telefone').value = '';
-    document.getElementById('endereco').value = '';
-
-    // Limpa o valor do campo de entrada da URL da imagem no modal
-    document.getElementById('image-url-modal').value = '';
-
-    // Remove a imagem exibida na pictureImage
-    pictureImage.innerHTML = `<img src="${defaultImageSrc}" alt="${pictureImageTxt}" class="picture__img">`;
-}
 
 
 
@@ -181,5 +160,30 @@ function alertas() {
 
 document.getElementById('salvar').addEventListener('click', incluirDados)
 
-document.getElementById('armazena').addEventListener('click', imprimeDados)
+try {
+  // Obtém os cadastros armazenados no localStorage
+  const cadastrosData = JSON.parse(localStorage.getItem('dbcadastrohemocentro')) || {};
+  const cadastros = cadastrosData.cadastros || [];
+
+  // Verifica se há pelo menos um cadastro
+  if (cadastros.length > 0) {
+      // Obtém o último cadastro
+      const ultimoCadastro = cadastros[cadastros.length - 1];
+
+      // Obtém o nome do último cadastro
+      const nomeUltimoCadastro = ultimoCadastro.nome;
+      
+      const emailIltimo=ultimoCadastro.email;
+
+      // Atualiza o conteúdo da tag <h1> com o nome do último cadastro
+      document.getElementById('user_perfil').querySelector('h1').textContent = nomeUltimoCadastro;
+      document.getElementById('firstname').placeholder = nomeUltimoCadastro;
+     
+      document.getElementById('email').placeholder = emailIltimo;
+  } else {
+      console.log('Nenhum cadastro encontrado.');
+  }
+} catch (error) {
+  console.error('Erro ao obter o último cadastro:', error);
+}
 

@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;300;400;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Sora', sans-serif;
+}
+
+html{
+    background-color: white;
+}
+
+/*Aqui inicia o código do cabeçalho*/
+
+header {
+    position: absolute;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: #e20001;
+}
+#inicio{
+    padding: 25px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#header li{
+    list-style: none;
+}
+
+#header li a{
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+.login{
+    display: flex;
+    gap: 30px;
+}
+
+#entrar {
+    font-size: 17px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#entrar a{
+    color: white;
+    text-decoration: none;
+}
+
+#cadastro {
+    width: 150px;
+    font-size: 17px;
+    background: white;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    color: #232323;
+    cursor: pointer;
+}
+
+#cadastro:focus{
+    background-color: aqua;
+}
+
+#logo{
+    width: 125px;
+    height: 49px;
+}
+
+/*Aqui inicia o código do main*/
+
+main{
+    max-width: 100%;
+}
+
+.banner{
+    width: 100%;
+    height: 620px;
+    background: url(imagem/Banner.png);
+    background-size: cover;
+    z-index: 1;
+}
+
+.banner_text{
+    position: absolute;
+    margin-top: 180px;
+    color: white;
+    padding: 0px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.banner_text h1 {
+    font-size: 69px;
+}
+
+.banner_text p {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.banner_text a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner_text button {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    width: 390px;
+    padding: 15px;
+    background: none;
+    border: solid white 2px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/*Código das doações necessárias*/
+
+.donate_container{
+    padding: 0px 60px;
+    position: relative;
+    top: -90px;
+}
+
+.donate{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+    padding: 30px 60px;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.donate h1{
+    color: #232323;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#ShowMore{
+    color: #9A9A9A;
+    font-size: 20px;
+    background: none;
+    border: none;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+#ShowMore i {
+    color:#7D7D7D;
+    font-size: 15px;
+}
+
+.donate_names{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hemocentro{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.name_adress{
+    width: 150px;
+}
+
+.name_adress a{
+    font-size: 12px;
+    color: #7D7D7D;
+}
+
+.hemocentro button{
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    width: 80px;
+    height: 80px;
+    background-color: #e20001;
+    border-radius: 20px;
+    border: none;
+}
+
+/*Mapa*/
+
+.mapa{
+    padding: 60px;
+}
+
+#map {width: 100%; height: 450px; border: 0; }
+
+iframe{
+ width: 100%;
+}
+
+/*Aqui inicia o código das pessoas*/
+
+.need_donate{
+    padding: 0px 60px;
+}
+
+.need{
+    background-color: #e20001;
+    border-radius: 50px;
+    padding: 40px 60px;;
+}
+
+.people {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.top p{
+    font-size: 35px;
+    color: #232323;
+}
+
+.top button{
+    background: none;
+    border-radius: 100px;
+    border: solid #232323 2px;
+    padding: 15px;
+    width: 350px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.person{
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0px 30px;
+}
+
+.person_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    position: relative;
+    top: -55px;
+}
+
+.person img{
+    width: 100px;
+    border-radius: 120px;
+    border: solid white 5px;
+}
+
+.person h1{
+    font-size: 25px;
+    color: #232323;
+}
+
+.person p{
+    text-align: justify;
+    color: #7D7D7D;
+    font-size: 10px;
+}
+
+.person h2{
+    font-size: 30px;
+    background-color: #e20001;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 100px;
+}
+
+
+
+/*Aqui inicia o código do rodapé*/
+
+footer{
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e20001;
+}
+
+#info_rodape{
+    color: white;
+    list-style: none;
+    font-weight: 300;
+}
+
+#redes_sociais{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+#redes_sociais i{
+    text-align: center;
+    font-size: 45px;
+    color: #e20001;
+    background-color: white;
+    height: 45px;
+    width: 45px;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+#youtube {
+    font-size: 40px;
+}
+
+#endereco_rodape{
+    color: white;
+    font-weight: 300;
+}

@@ -13,7 +13,9 @@ header{
     align-items: center;
     background-color: #e20001;
 }
-
+a{
+    color: #7A7A7A;
+}
 #header{
     display: flex;
     justify-content: space-between;

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe</title>
+    <link rel="stylesheet" href="hemo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="imagem/icon.png" type="image/x-icon">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+    <header>
+        <section id="inicio">
+            <a href="index.html"><img id="logo" src="imagem/LOGO.png"></a>
+            <ul id="header">
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="#">SOBRE NÓS</a></li>
+                <li><a href="#">COMO DOAR</a></li>
+                <li><a href="agendamentos.html">AGENDAR DOAÇÃO</a></li>
+                <li><a href="esqueleto_aside.html">RECEBER SANGUE</a></li>
+            </ul>
+        </section>
+
+    </header>
+    <main>
+        <section id="login">
+            <section class="background">
+                <div class="login-aside">
+                    <h1>Login</h1>
+                    <div class="login-button">
+                        <button id="user-button"><a href="login.html">LOGIN COMO <strong>USUÁRIO</strong></a></button>
+                        <button id="hemo-button"><a href="hemo.html">LOGIN COMO <strong>HEMOCENTRO</strong></a></button>
+                    </div>
+                    <p>Entrar com</p>
+                    <div class="entrar-com">
+                        <button class="meios-de-entrar"><svg width="25" height="31" viewBox="0 0 32 31" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M31.9983 14.591V16.8327C31.9126 16.8734 31.9446 16.9531 31.9345 17.0181C31.8874 17.389 31.8589 17.7616 31.7934 18.1276C30.992 22.5182 28.645 25.9311 24.8346 28.4135C22.8774 29.6888 20.7286 30.4892 18.3951 30.8324C18.012 30.8894 17.6172 30.8747 17.2442 31H14.6805C14.3344 30.8503 13.9564 30.8845 13.5935 30.8243C8.62732 30.0109 4.84556 27.5123 2.2163 23.3624C2.19614 23.3283 2.18774 23.2876 2.1743 23.2502C1.2066 21.7097 0.568182 20.0406 0.259055 18.2691C-0.552403 13.628 0.539622 9.42776 3.57545 5.75783C6.15431 2.64099 9.53286 0.765358 13.6238 0.182984C18.4203 -0.498621 22.6775 0.732823 26.3971 3.72928C26.9784 4.19616 27.0153 4.83709 26.4844 5.35603C25.5453 6.27351 24.6011 7.18611 23.6553 8.09546C23.168 8.56559 22.6355 8.58999 22.0945 8.16541C20.7471 7.11128 19.2183 6.43944 17.5097 6.19055C14.5646 5.76271 11.9185 6.46546 9.6639 8.35249C7.35049 10.2883 6.19967 12.7723 6.24335 15.7412C6.26519 17.3451 6.74736 18.8352 7.55378 20.231C8.06955 21.002 8.62564 21.7422 9.33126 22.3652C11.3859 24.1758 13.7834 25.1031 16.5756 24.8851C20.5102 24.5776 23.2873 22.6337 24.9489 19.1768C24.9909 19.0874 25.0547 19.0028 25.0329 18.871H24.6935C22.454 18.871 20.2145 18.871 17.9734 18.871C17.0678 18.871 16.6865 18.4985 16.6865 17.6168C16.6865 16.3967 16.6865 15.1767 16.6865 13.955C16.6865 13.2018 17.1014 12.7984 17.886 12.7984C22.1264 12.7951 26.3668 12.7951 30.6072 12.7984C31.3599 12.7984 31.711 13.0912 31.8538 13.8053C31.9059 14.0672 31.879 14.3405 32 14.5894L31.9983 14.591Z"
+                                    fill="#282828" />
+                            </svg>
+                        </button>
+                        <button class="meios-de-entrar"><svg width="25" height="28" viewBox="0 0 21 39" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_10_682)">
+                                    <path
+                                        d="M5.86052 22.0115C4.92936 22.0115 4.07376 22.0115 3.21816 22.0115C2.48916 22.0115 1.76017 22.0238 1.03117 22.0074C0.269501 21.989 0.0203758 21.7599 0.0142497 21.0028C-0.00208632 19.0182 -0.00412832 17.0314 0.0142497 15.0467C0.0203758 14.2958 0.287879 14.0564 1.04138 14.0524C2.45241 14.0442 3.86343 14.0503 5.27446 14.0503C5.44803 14.0503 5.61956 14.0503 5.86052 14.0503C5.86052 13.8355 5.85847 13.6513 5.86052 13.4672C5.89319 11.6585 5.8258 9.83951 5.97895 8.04102C6.37306 3.45784 9.86285 0.186191 14.4533 0.034782C16.3217 -0.0265999 18.1942 0.00818319 20.0647 0.0122753C20.7222 0.0122753 20.9897 0.284402 20.9938 0.94528C21.004 2.8031 21.002 4.66298 20.9938 6.5208C20.9918 7.23283 20.7427 7.49063 20.0116 7.507C18.7272 7.53769 17.4448 7.53769 16.1604 7.55815C14.7208 7.58066 14.1143 8.14537 14.0857 9.56943C14.0551 11.0099 14.0796 12.4523 14.0796 13.9501C14.296 13.9501 14.4655 13.9501 14.635 13.9501C16.2686 13.9501 17.9002 13.9501 19.5338 13.9501C20.563 13.9501 20.8039 14.1915 20.806 15.2043C20.806 17.0949 20.81 18.9854 20.806 20.8739C20.806 21.721 20.5813 21.9481 19.7319 21.9502C17.8777 21.9563 16.0236 21.9522 14.0816 21.9522C14.0816 22.1732 14.0816 22.3716 14.0816 22.5681C14.0816 27.54 14.0816 32.5119 14.0816 37.4839C14.0816 38.8547 13.9367 38.998 12.546 38.998C10.7225 38.998 8.89902 39 7.07755 38.998C6.10147 38.998 5.8646 38.7606 5.8646 37.7928C5.8646 32.7411 5.8646 27.6914 5.8646 22.6397C5.8646 22.4535 5.8646 22.2653 5.8646 22.0136L5.86052 22.0115Z"
+                                        fill="#282828" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_10_682">
+                                        <rect width="21" height="39" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <button class="meios-de-entrar"><svg width="28" height="28" viewBox="0 0 29 35" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_10_677)">
+                                    <path
+                                        d="M9.77396 35H8.89352C8.44602 34.853 7.9767 34.7501 7.55467 34.5517C6.30131 33.9618 5.37539 32.9659 4.58409 31.8653C2.21199 28.5707 0.589356 24.9472 0.125487 20.8662C-0.185578 18.1284 0.047266 15.4476 1.24787 12.9229C1.97369 11.3959 2.98328 10.0969 4.40945 9.17078C6.12668 8.05727 8.01308 7.84597 9.97042 8.23367C11.1747 8.47254 12.3607 8.80145 13.5486 9.1083C14.349 9.31594 15.1476 9.3876 15.9516 9.15608C17.0231 8.84738 18.0854 8.50194 19.1641 8.21897C21.7345 7.54646 24.1394 7.87169 26.2586 9.57686C26.9026 10.095 27.4574 10.7253 28.0904 11.3408C25.6419 13.2959 24.0557 15.6148 24.3358 18.823C24.6105 21.9577 26.124 24.2674 29 25.6032C28.3942 27.5472 27.4556 29.3296 26.3223 31.0145C25.6346 32.0362 24.8815 33.0008 23.9229 33.7818C22.7969 34.7005 21.5453 35.1819 20.0882 34.7979C19.206 34.5664 18.3328 34.2962 17.4669 34.0133C15.9407 33.5153 14.4199 33.4529 12.8864 33.9802C11.855 34.3348 10.8127 34.6601 9.77578 34.9982L9.77396 35Z"
+                                        fill="#282828" />
+                                    <path
+                                        d="M14.2672 8.49092C14.3345 4.1839 16.421 0.959156 21.0615 0C21.2944 0.720286 21.1943 1.44425 21.0488 2.15718C20.6086 4.32171 19.4862 6.05812 17.7581 7.40498C17.0013 7.9948 16.1318 8.26859 15.2004 8.38618C14.8984 8.42477 14.5965 8.45417 14.269 8.49092H14.2672Z"
+                                        fill="#282828" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_10_677">
+                                        <rect width="29" height="35" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="divisor">
+                        <div class="line"></div>
+                        <p class="continue">ou contine com</p>
+                        <div class="line"></div>
+                    </div>
+                    <section id="input-login">
+                        <input id="email" type="email" placeholder="Digite o seu e-mail">
+                        <input id="password" type="password" placeholder="Digite a sua senha">
+                    </section>
+                    <button id="button">Entrar</button>
+                </div>
+                <div class="login-img">
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <img id="logo" src="imagem/LOGO.png">
+        <ul id="info_rodape">
+            <li>Aspectos legais e responsabilidades</li>
+            <li>Política de Privacidade</li>
+            <li>Ouvidoria</li>
+            <li>Desenvolvido pela turma de S.I. 2º Semestre 2023</li>
+        </ul>
+        <section id="redes_sociais">
+            <i id="whatsapp" class="fa-brands fa-whatsapp"></i>
+            <i id="instagram" class="fa-brands fa-instagram"></i>
+            <i id="youtube" class="fa-brands fa-youtube"></i>
+            <i id="facebook" class="fa-brands fa-facebook-f"></i>
+        </section>
+        <div id="endereco_rodape">
+            Rua Walter Ianni, 255 - São Gabriel <br> Belo Horizonte - MG, 31980-110
+        </div>
+    </footer>
+</body>
+
+<script src="loginhemo.js"></script>
+
+</html>

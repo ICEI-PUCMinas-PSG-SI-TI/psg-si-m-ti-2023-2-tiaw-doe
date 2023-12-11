@@ -12,18 +12,16 @@ function leDados() {
         objDados = {
             sangues: [
                 {
-                    tipo2: "A-",
-                    tipo4: "B-",
-                    tipo8: "O-",
+                    tipo2: "A-"
+                   
                 },
                 {
-                    tipo1: "A+",
-                    tipo5: "AB+",
+                    tipo1: "A+"
+                   
 
                 },
                 {
-                    tipo6: "AB-",
-
+                    tipo6: "AB-"
                 }
 
 
@@ -97,3 +95,29 @@ function alerta() {
     alert("Publicado com sucesso!");
 }
 
+try {
+    // Obtém os cadastros armazenados no localStorage
+    const cadastrosData = JSON.parse(localStorage.getItem('dbcadastrohemocentro')) || {};
+    const cadastros = cadastrosData.cadastros || [];
+  
+    // Verifica se há pelo menos um cadastro
+    if (cadastros.length > 0) {
+        // Obtém o último cadastro
+        const ultimoCadastro = cadastros[cadastros.length - 1];
+  
+        // Obtém o nome do último cadastro
+        const nomeUltimoCadastro = ultimoCadastro.nome;
+        
+        
+  
+        // Atualiza o conteúdo da tag <h1> com o nome do último cadastro
+        document.getElementById('user_perfil').querySelector('h1').textContent = nomeUltimoCadastro;
+        document.getElementById('firstname').placeholder = nomeUltimoCadastro;
+       
+        document.getElementById('email').placeholder = emailIltimo;
+    } else {
+        console.log('Nenhum cadastro encontrado.');
+    }
+  } catch (error) {
+    console.error('Erro ao obter o último cadastro:', error);
+  }

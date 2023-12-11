@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     const hemocentros = document.querySelectorAll('.donate_names .hemocentro');
-    const ShowMoreButton = document.getElementById('ShowMore');
+    const showMoreButton = document.getElementById('ShowMore');
 
     const maxToShow = 4;
     let hemocentrosToShow = maxToShow;
@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    ShowMoreButton.addEventListener('click', function () {
+    showMoreButton.addEventListener('click', function () {
         if (hemocentrosToShow === maxToShow) {
             hemocentrosToShow = hemocentros.length;
-            ShowMoreButton.innerHTML = 'Mostrar menos <i class="fa-solid fa-chevron-up"></i>';
+            showMoreButton.innerHTML = 'Mostrar menos <i class="fa-solid fa-chevron-up"></i>';
         } else {
             hemocentrosToShow = maxToShow;
-            ShowMoreButton.innerHTML = 'Mostrar mais <i class="fa-solid fa-chevron-down"></i>';
+            showMoreButton.innerHTML = 'Mostrar mais <i class="fa-solid fa-chevron-down"></i>';
         }
 
         showHemocentros();
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     showHemocentros();
 });
-
+*/
 var nome = localStorage.getItem("nome");
 var tipo = localStorage.getItem("tipoSangue");
 var description = localStorage.getItem("descricao");
@@ -40,10 +40,12 @@ var showAll = false;
 function showPeople() {
     people.innerHTML = "";
 
-    var limit = showAll ? 50 : 3;
+    var limit = showAll ? 8 : 4;
 
     for (var i = 0; i < limit; i++) {
-        people.innerHTML += `<div class="person"><div class="person_info"><img src="imagem/user_photo_0.png" alt=""><h1>${nome}</h1><p>${description}</p><h2>${tipo}</h2></div></div>`;
+        if(nome != null){
+            people.innerHTML += `<div class="person"><div class="person_info"><img src="imagem/user_photo_0.png" alt=""><h1>${nome}</h1><p>${description}</p><h2>${tipo}</h2></div></div>`;
+        }
     }
 }
 
@@ -127,29 +129,16 @@ let hemoBH = [
     }
 ]
 
-// --------------------------------------------------
-// Cria o mapa baseado na API Mapbox e adiciona no 
-// elemento de id: map        
-// --------------------------------------------------
+const centralLatLong= [-43.93178856196358, -19.924635141384183]
 
-// ----------------------------------------------
-// Cria o mapa e adiciona no elemento de id: map 
-const centralLatLong= [-43.9397233,-19.9332786]
-
-// ----------------------------------------------
-// Crie uma conta no Mapbox e adicione sua accessToken 
-// na linha abaixo
 mapboxgl.accessToken = 'pk.eyJ1IjoiaXNhZG9yYXhhdmllciIsImEiOiJjbHBmaWExc3cwcGY0MmtvMGd0d3M2anRpIn0.2tNFxB8MJpLS5eoQ0RbFWQ';
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v12',
     center: centralLatLong,
-    zoom: 9
+    zoom: 14
 });
 
-
-// ----------------------------------------------
-// Adiciona marcadores para unidades da PUC Minas
 hemoBH.forEach ((uni) => {
     var popup = new mapboxgl.Popup({ offset: 25 })
         .setHTML(`<h3><a href="${uni.url}" target="_blank">${uni.descricao}</a></h3><br>

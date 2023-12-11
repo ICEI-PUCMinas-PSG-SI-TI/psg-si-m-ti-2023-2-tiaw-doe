@@ -11,6 +11,47 @@ html {
 
 /*Aqui inicia o código do main*/
 
+#picture__input {
+    display: none;
+  }
+  
+  .picture {
+    width: 400px;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+  }
+  
+  .picture:hover {
+    color: #777;
+    background: #ccc;
+  }
+  
+  .picture:active {
+    border-color: turquoise;
+    color: turquoise;
+    background: #eee;
+  }
+  
+  .picture:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .picture__img {
+    max-width: 100%;
+  }
+
 #container_main {
     display: flex;
     max-width: 100%;
@@ -18,13 +59,13 @@ html {
 }
 
 #info {
-    width: 20%;
+    width: 28%;
     background-color: white;
-    padding: 20px 60px;
+    padding: 20px 20px 20px 60px;
 }
 
 #user_infor {
-    width: 80%;
+    width: 72%;
     background-color: #F3F3F3;
 }
 
@@ -32,7 +73,7 @@ html {
     width: 165px;
 }
 
-#user_perfil{
+#user_perfil {
     margin-top: 40px;
     display: flex;
     align-items: center;
@@ -45,7 +86,7 @@ html {
     color: #282828;
 }
 
-#user_photo{
+#user_photo {
     width: 60px;
     border-radius: 30px;
 }
@@ -54,23 +95,25 @@ html {
     list-style: none;
 }
 
-#functions li a{
+#functions li a {
     text-decoration: none;
     color: #7A7A7A;
 }
 
 #functions {
-    margin-top: 30px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 50px;
 }
-.fun {
+
+.fun a{
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
+
 .fun i {
-    color:#e20001;
+    color: #e20001;
     font-size: 30px;
 }
 
@@ -79,17 +122,14 @@ html {
     font-weight: 400;
 }
 
-
-
-
 .fun a {
-    color: #282828;
+    color: #7A7A7A;
     text-decoration: none;
 }
 
 /*Main*/
 
-.aside_direito h1{
+.aside_direito h1 {
     color: #282828;
     font-size: 40px;
 }
@@ -120,22 +160,22 @@ html {
 
 .file p {
     text-align: center;
-    color: #7A7A7A;
+    color: #CBCBCB;
 }
 
-.file i{
-color: #e20001;
-font-size: 100px;
+.file i {
+    color: #e20001;
+    font-size: 100px;
 }
 
-.file1{
+.file1 {
     width: 0;
     height: 0;
     opacity: 0;
     z-index: -1;
 }
 
-.file_label{
+.file_label {
     padding: 10px 20px;
     font-size: 15px;
     color: white;
@@ -157,9 +197,11 @@ font-size: 100px;
     padding: 10px;
     font-size: 20px;
     text-align: center;
-    color: #7A7A7A;
+    outline: none;
+    color: #CBCBCB;
     width: 370px;
 }
+
 #tipo_sangue {
     background-color: #e20001;
     border: none;
@@ -173,7 +215,6 @@ font-size: 100px;
     font-weight: 600;
     outline: none;
 }
-
 
 .direito textarea {
     resize: none;
@@ -191,17 +232,17 @@ font-size: 100px;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    color: #282828;
+    color: #7d7d7d;
 }
 
-.information {
-    width: 47%;
-    text-align: justify;
-}
-
-.information h1{
+.infomation h1 {
     font-size: 30px;
     font-weight: 500;
+}
+
+.infomation {
+    width: 47%;
+    text-align: justify;
 }
 
 #publicar {
@@ -214,15 +255,15 @@ font-size: 100px;
     border-radius: 10px;
     border: none;
 }
+
 #cancelar {
-    padding: 10px 20px;
+    padding: 8px 10px;
     font-size: 20px;
     width: 150px;
     color: #e20001;
     border: solid #e20001 2px;
     cursor: pointer;
     border-radius: 10px;
-
 }
 
 
@@ -268,38 +309,22 @@ footer {
     font-weight: 300;
 }
 
-#informacoesDiv{
+#informacoesDiv {
     padding: 20px;
     margin: 20px;
 }
 
-#imagemPublicada{
+#imagemPublicada {
     width: 250px;
     height: 250px;
 }
 
-.pedir{
+.informacoesDiv {
+    padding: 20px;
+    text-align: center;
+}
+
+.pedir {
     padding: 40px;
     margin: 40px;
-}
-
-.desc h1{
-    font-size: 25px;
-}
-
-#containerInformacoes {
-    padding-left: 330px;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.informacoesDiv{
-    background-color: white;
-    border-radius: 10px;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    right: 100;
-    left: 100;
-    display: none;
 }

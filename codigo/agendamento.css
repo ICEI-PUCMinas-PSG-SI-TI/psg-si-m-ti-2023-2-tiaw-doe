@@ -20,6 +20,9 @@ body main article{
     
     
 }
+a{
+    text-decoration: none;
+}
 main{
     width: 100%;
 }

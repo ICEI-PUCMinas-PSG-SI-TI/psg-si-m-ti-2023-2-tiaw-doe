@@ -1,5 +1,5 @@
 function leDados() {
-    let strDados = localStorage.getItem('db')
+    let strDados = localStorage.getItem('dbagendamento')
     let objDados = {};
 
 
@@ -52,7 +52,7 @@ function leDados() {
 
 function salvaDados(dados) {
 
-    localStorage.setItem('db', JSON.stringify(dados))
+    localStorage.setItem('dbagendamento', JSON.stringify(dados))
 
 }
 
@@ -98,26 +98,6 @@ function incluirAgendamento() {
     }
 }
 
-
-function alterarAgendamento(index) {
-    let objDados = leDados();
-    if (index >= 0 && index < objDados.agendamentos.length) {
-        document.getElementById('confirmar').addEventListener('click', alerta1)
-        let agendamento = objDados.agendamentos[index];
-        document.getElementById('name').value = agendamento.nome;
-        document.getElementById('number').value = agendamento.documento;
-        document.getElementById('hemocentro').value = agendamento.hemocentro;
-        document.getElementById('data').value = agendamento.nascimento;
-        document.getElementById('sexo').value = agendamento.sexo;
-        document.getElementById('sangue').value = agendamento.sangue;
-        document.getElementById('data1').value = agendamento.data;
-        document.getElementById('hora').value = agendamento.horario;
-        deleteAgendamento(index);
-
-    } else {
-        alert("O índice fornecido é inválido. Por favor, tente novamente com um índice válido.");
-    }
-}
 
 
 document.getElementById('confirmar').addEventListener('click', incluirAgendamento);

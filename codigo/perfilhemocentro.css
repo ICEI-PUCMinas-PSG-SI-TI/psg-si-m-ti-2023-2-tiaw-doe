@@ -20,7 +20,9 @@
 #flex {
     display: flex;
 }
-
+a{
+    text-decoration: none;
+}
 #rodape {
     padding: 30px 60px;
     display: flex;
