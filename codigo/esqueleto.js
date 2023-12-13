@@ -1,14 +1,25 @@
 document.getElementById('publicar').addEventListener('click', function() {
-
     var nome = document.getElementById('nome').value;
     var tipoSangue = document.getElementById('tipo_sangue').value;
     var descricao = document.getElementById('descricao').value;
-    var imagemInput = document.getElementById('imagem'); 
 
-    localStorage.setItem('nome', nome);
-    localStorage.setItem('tipoSangue', tipoSangue);
-    localStorage.setItem('descricao', descricao);
+    var dadosSalvos = JSON.parse(localStorage.getItem('dados')) || [];
 
+    var novoDado = {
+        nome: nome,
+        tipoSangue: tipoSangue,
+        descricao: descricao
+    };
+
+    dadosSalvos.push(novoDado);
+
+    localStorage.setItem('dados', JSON.stringify(dadosSalvos));
+
+    document.getElementById('nome').value = '';
+    document.getElementById('tipo_sangue').value = '';
+    document.getElementById('descricao').value = '';
+
+    alert('O seu pedido de doação foi publicado!');
 });
 
 document.getElementById('cancelar').addEventListener('click', function() {

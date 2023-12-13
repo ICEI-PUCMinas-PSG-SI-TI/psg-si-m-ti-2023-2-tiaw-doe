@@ -47,7 +47,7 @@ function leDados() {
 
 const inputFile = document.querySelector("#picture__input");
 const pictureImage = document.querySelector(".picture__image");
-const defaultImageSrc = "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1522&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const defaultImageSrc = "imagem/user_photo_0.png";
 const pictureImageTxt = "Escolha";
 
 // Função para abrir o seletor de arquivo
@@ -157,16 +157,7 @@ function incluirDados() {
 
 function salvaDados(dados) {
     localStorage.setItem('db', JSON.stringify(dados))
-
-
-
 }
-
-
-
-
-
-
 
 function limparFormulario() {
     // Limpa os valores dos campos do formulário
@@ -191,14 +182,7 @@ function alertas() {
     
 }
 
-
-
-
-
-
 document.getElementById('salvar').addEventListener('click', incluirDados)
-
-
 
 try {
   // Obtém os cadastros armazenados no localStorage

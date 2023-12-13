@@ -1,6 +1,6 @@
-/*document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const hemocentros = document.querySelectorAll('.donate_names .hemocentro');
-    const showMoreButton = document.getElementById('ShowMore');
+    const ShowMoreButton = document.getElementById('ShowMore');
 
     const maxToShow = 4;
     let hemocentrosToShow = maxToShow;
@@ -15,13 +15,13 @@
         });
     }
 
-    showMoreButton.addEventListener('click', function () {
+    ShowMoreButton.addEventListener('click', function () {
         if (hemocentrosToShow === maxToShow) {
             hemocentrosToShow = hemocentros.length;
-            showMoreButton.innerHTML = 'Mostrar menos <i class="fa-solid fa-chevron-up"></i>';
+            ShowMoreButton.innerHTML = '<strong>Ver menos</strong> <i class="fa-solid fa-chevron-up"></i>';
         } else {
             hemocentrosToShow = maxToShow;
-            showMoreButton.innerHTML = 'Mostrar mais <i class="fa-solid fa-chevron-down"></i>';
+            ShowMoreButton.innerHTML = '<strong>Ver mais</strong> <i class="fa-solid fa-chevron-down"></i>';
         }
 
         showHemocentros();
@@ -29,22 +29,31 @@
 
     showHemocentros();
 });
-*/
-var nome = localStorage.getItem("nome");
-var tipo = localStorage.getItem("tipoSangue");
-var description = localStorage.getItem("descricao");
+
+var dadosSalvos = JSON.parse(localStorage.getItem('dados')) || [];
 
 var people = document.querySelector(".people");
 var showAll = false;
+var contador = 0;
 
 function showPeople() {
     people.innerHTML = "";
 
-    var limit = showAll ? 8 : 4;
+    var limit = showAll ? dadosSalvos.length : 3;
 
     for (var i = 0; i < limit; i++) {
-        if(nome != null){
-            people.innerHTML += `<div class="person"><div class="person_info"><img src="imagem/user_photo_0.png" alt=""><h1>${nome}</h1><p>${description}</p><h2>${tipo}</h2></div></div>`;
+        var pessoa = dadosSalvos[i];
+        if (pessoa) {
+            var { nome, descricao, tipoSangue } = pessoa;
+            people.innerHTML += `
+            <div class="person">
+                <div class="person_info">
+                    <img src="imagem/user_photo_0.png" alt="">
+                    <h1>${nome}</h1>
+                    <p>${descricao}</p>
+                    <h2>${tipoSangue}</h2>
+                </div>
+            </div>`;
         }
     }
 }
@@ -58,6 +67,7 @@ function togglePeople() {
 }
 
 showPeople();
+
 
 
 /*Java Script do mapa */
@@ -136,7 +146,7 @@ const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v12',
     center: centralLatLong,
-    zoom: 14
+    zoom: 13
 });
 
 hemoBH.forEach ((uni) => {

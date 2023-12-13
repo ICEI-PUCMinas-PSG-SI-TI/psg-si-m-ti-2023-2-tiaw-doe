@@ -15,6 +15,19 @@ aside {
   width: 25%;
 }
 
+.sair {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sair i {
+  font-size: 30px;
+  color: #282828;
+  background: none;
+}
+
 #flex {
   display: flex;
 }

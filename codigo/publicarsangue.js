@@ -11,21 +11,6 @@ function leDados() {
     else {
         objDados = {
             sangues: [
-                {
-                    tipo2: "A-"
-                   
-                },
-                {
-                    tipo1: "A+"
-                   
-
-                },
-                {
-                    tipo6: "AB-"
-                }
-
-
-
             ]
         }
     }

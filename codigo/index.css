@@ -1,51 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;300;400;500;700;800&display=swap');
 
-*{
+* {
     margin: 0;
     font-family: 'Sora', sans-serif;
 }
 
-html{
-    background-color: white;
-}
 
 /*Aqui inicia o código do cabeçalho*/
 
+.logotipo {
+    width: 125px;
+}
+
+#logo {
+    width: 125px;
+    height: 49px;
+}
+
 header {
     position: absolute;
-    width: 100%;
-}
-a{
-    text-decoration: none;
-    color: #e20001;
-}
-#inicio{
-    padding: 25px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    z-index: 2;
+    margin-top: 20px;
 }
 
-#header{
+#img-logo{
+    margin-left: 55px;
+}
+
+nav ul {
+    margin-top: 7px;
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    align-items: center;
 }
 
-#header li{
-    list-style: none;
+.a-nav{
+    font-size: 14px;
 }
 
-#header li a{
-    font-size: 17px;
-    font-weight: 400;
-    text-decoration: none;
+nav ul li a {
     color: white;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+.hamburguer {
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.hamburguer div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background-color: white;
+    cursor: pointer;
 }
 
 .login{
     display: flex;
     gap: 30px;
+    margin-right: 55px;
+    margin-left: 50px;
 }
 
 #entrar {
@@ -61,6 +88,11 @@ a{
     text-decoration: none;
 }
 
+#cadastro a{
+    color:#232323;
+    text-decoration: none;
+}
+
 #cadastro {
     width: 150px;
     font-size: 17px;
@@ -72,276 +104,1357 @@ a{
     cursor: pointer;
 }
 
-#cadastro:focus{
-    background-color: aqua;
+@media (min-width: 1350px) {
+
+    /*Aqui inicia o código do main*/
+
+    main {
+        max-width: 100%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 620px;
+        background: url(imagem/Banner.png);
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .banner_text {
+        position: absolute;
+        margin-top: 180px;
+        color: white;
+        padding: 0px 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .banner_text h1 {
+        font-size: 69px;
+    }
+
+    .banner_text p {
+        font-size: 22px;
+        font-weight: 300;
+        width: 800px;
+    }
+
+    .banner_text a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .banner_text button {
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        width: 390px;
+        padding: 15px;
+        background: none;
+        border: solid white 2px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    /*Código das doações necessárias*/
+
+    .donate_container {
+        padding: 0px 60px;
+        position: relative;
+        top: -90px;
+    }
+
+    .donate {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 30px;
+        padding: 30px 60px;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .donate h1 {
+        color: #232323;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    #ShowMore {
+        color: #9A9A9A;
+        font-size: 20px;
+        background: none;
+        border: none;
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #ShowMore i {
+        color: #7D7D7D;
+        font-size: 15px;
+    }
+
+    .donate_names {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .hemocentro {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .name_adress {
+        width: 150px;
+    }
+
+    .name_adress a {
+        font-size: 12px;
+        color: #7D7D7D;
+    }
+
+    .hemocentro button {
+        font-size: 30px;
+        color: white;
+        font-weight: 600;
+        width: 80px;
+        height: 80px;
+        background-color: #e20001;
+        border-radius: 20px;
+        border: none;
+    }
+
+    /*Etapas*/
+
+    #etapas{
+        padding: 0px 55px 80px 55px;
+    }
+
+    #etapas h1{
+        color: #232323;
+        font-weight: 400;
+        margin-bottom: 20px;
+        font-size: 35px;
+    }
+
+    .etapas-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    svg{
+        width: 100px;
+    }
+
+    .etapas{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .etapas p {
+        width: 300px;
+        text-align: justify;
+    }
+
+    .line{
+        width: 2px;
+        height: 150px;
+        border-radius: 20px;
+        background-color: #CBCBCB;
+    }
+
+    /*Mapa*/
+
+    .mapa {
+        padding: 60px;
+    }
+
+    #map {
+        width: 100%;
+        height: 450px;
+        border: 0;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    /*Aqui inicia o código das pessoas*/
+
+    .need_donate {
+        padding: 0px 60px;
+    }
+
+    .need {
+        background-color: #e20001;
+        border-radius: 50px;
+        padding: 40px 60px;
+        ;
+    }
+
+    .people {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .top p {
+        font-size: 35px;
+        color: #232323;
+    }
+
+    .top button {
+        background: none;
+        border-radius: 100px;
+        border: solid #232323 2px;
+        padding: 15px;
+        width: 350px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .person {
+        margin-top: 30px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 0px 30px;
+    }
+
+    .person_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+        position: relative;
+        top: -55px;
+    }
+
+    .person img {
+        width: 100px;
+        border-radius: 120px;
+        border: solid white 5px;
+    }
+
+    .person h1 {
+        font-size: 25px;
+        color: #232323;
+    }
+
+    .person p {
+        text-align: justify;
+        color: #7D7D7D;
+        font-size: 10px;
+    }
+
+    .person h2 {
+        font-size: 30px;
+        background-color: #e20001;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border-radius: 100px;
+    }
+
+    /*Quem pode doar?*/
+
+    #quem-pode{
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .doando{
+        height: 550px;
+    }
+
+    .quem-pode-flex h1{
+        color: #E20001;
+        font-size: 64px;
+        font-weight: 400;
+    }
+
+    .quem-pode-flex p{
+        color: #7A7A7A;
+        text-align: justify;
+        font-size: 20px;
+        width: 90%;
+        font-weight: 300;
+    }
+
+    /*Quem somos?*/
+
+    #quem-somos{
+        padding: 0px 55px;
+    }
+    
+    #quem-somos div{
+        background-color: #E20001;
+        padding: 10px 60px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+        color: white;
+    }
+    
+    #quem-somos h1{
+        font-size: 65px;
+        font-weight: 400;
+        width: 500px;
+    }
+    
+    #quem-somos p{
+        font-size: 25px;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    /*Aqui inicia o código do rodapé*/
+
+    footer {
+        padding: 30px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #e20001;
+    }
+
+    #info_rodape {
+        color: white;
+        list-style: none;
+        font-weight: 300;
+    }
+
+    #redes_sociais {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #redes_sociais i {
+        text-align: center;
+        font-size: 45px;
+        color: #e20001;
+        background-color: white;
+        height: 45px;
+        width: 45px;
+        padding: 10px;
+        border-radius: 100px;
+        transition: 0.8s;
+    }
+
+    #redes_sociais i:hover {
+        color: white;
+        background: none;
+        border: solid white 0.1px;
+        scale: 110%;
+    }
+
+    #youtube {
+        font-size: 40px;
+    }
+
+    #endereco_rodape {
+        color: white;
+        font-weight: 300;
+    }
+
 }
 
-#logo{
-    width: 125px;
-    height: 49px;
+@media (max-width: 1350px) and (min-width: 500px){
+
+    /*Aqui inicia o código do cabeçalho*/
+
+    .logotipo {
+        width: 90px;
+    }
+
+    nav {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        z-index: 15;
+        width: 280px;
+        height: 100%;
+        background-color: white;
+        transition: 0.5s;
+        box-shadow: 2px 0 20px 0 rgb(0, 0, 0, 0.5);
+    }
+
+    .a-nav{
+        color: #232323;
+        font-weight: 500;
+        padding: 0;
+    }
+
+    #nav_check:checked~nav {
+        left: 0;
+    }
+
+    .logo2 {
+        height: 39px;
+        width: 100px;
+        background: url(img/LOGO-COLORIDO.png);
+        background-size: cover;
+    }
+
+    nav .logo {
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+        width: 100%;
+        cursor: pointer;
+    }
+
+
+    .hamburguer {
+        display: block;
+        margin-right: 55px;
+    }
+
+    .login{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin: 200px 0px 0px 0px;
+    }
+    
+    #entrar a{
+        color: white;
+        text-decoration: none;
+    }
+
+    #cadastro a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    #cadastro {
+        width: 230px;
+        font-size: 17px;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        background-color: #e20001;
+    }
+
+    #entrar {
+        width: 230px;
+        font-size: 17px;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        background-color: #e20001;
+    }
+
+    /*Aqui inicia o código do main*/
+
+    main {
+        max-width: 100%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 620px;
+        background: url(imagem/Banner.png);
+        background-size: cover;
+        z-index: 1;
+    }
+
+    .banner_text {
+        position: absolute;
+        margin-top: 180px;
+        color: white;
+        padding: 0px 55px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .banner_text h1 {
+        font-size: 60px;
+    }
+
+    .banner_text p {
+        font-size: 20px;
+        font-weight: 300;
+        width: 500px;
+    }
+
+    .banner_text a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .banner_text button {
+        color: white;
+        font-size: 25px;
+        font-weight: 700;
+        width: 400px;
+        padding: 10px;
+        background: none;
+        border: solid white 2px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    /*Código das doações necessárias*/
+
+    .donate_container {
+        padding: 0px 55px;
+        position: relative;
+        top: -90px;
+    }
+
+    .donate {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 30px;
+        padding: 30px 55px;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .donate h1 {
+        color: #232323;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    #ShowMore {
+        color: #9A9A9A;
+        font-size: 12px;
+        background: none;
+        border: none;
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #ShowMore i {
+        color: #7D7D7D;
+        font-size: 10px;
+    }
+
+    .donate_names {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hemocentro {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .name_adress {
+        width: 150px;
+    }
+
+    .name_adress a {
+        font-size: 10px;
+        color: #7D7D7D;
+    }
+
+    .hemocentro button {
+        font-size: 15px;
+        color: white;
+        font-weight: 600;
+        width: 40px;
+        height: 40px;
+        background-color: #e20001;
+        border-radius: 10px;
+        border: none;
+    }
+
+    /*Etapas*/
+
+    #etapas{
+        padding: 0px 55px 80px 55px;
+    }
+
+    #etapas h1{
+        color: #232323;
+        font-weight: 400;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .etapas-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    svg{
+        width: 60px;
+        scale: 0.8;
+    }
+
+    .etapas{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .etapas h4 {
+        font-size: 15px;
+    }
+
+    .etapas p {
+        width: 300px;
+        text-align: justify;
+        font-size: 12px;
+    }
+
+    .line{
+        display: none;
+    }
+
+    /*Mapa*/
+
+    .mapa {
+        padding: 55px;
+    }
+
+    #map {
+        width: 100%;
+        height: 200px;
+        border: 0;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    /*Aqui inicia o código das pessoas*/
+
+    .need_donate {
+        padding: 0px 55px;
+    }
+
+    .need {
+        background-color: #e20001;
+        border-radius: 30px;
+        padding: 0px 55px;
+    }
+
+    .people {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .top p {
+        font-size: 16px;
+        color: #232323;
+    }
+
+    .top button {
+        background: none;
+        border-radius: 100px;
+        border: solid #232323 2px;
+        padding: 10px;
+        width: 350px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .person {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 0px 30px;
+    }
+
+    .person_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 165px;
+        position: relative;
+        top: -30px;
+    }
+
+    .person img {
+        width: 50px;
+        border-radius: 120px;
+        border: solid white 5px;
+    }
+
+    .person h1 {
+        font-size: 20px;
+        color: #232323;
+    }
+
+    .person p {
+        text-align: justify;
+        color: #7D7D7D;
+        font-size: 10px;
+    }
+
+    .person h2 {
+        font-size: 20px;
+        background-color: #e20001;
+        color: white;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        border-radius: 100px;
+    }
+
+    /*Quem pode doar?*/
+
+    #quem-pode{
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .doando{
+        height: 300px;
+    }
+
+    .quem-pode-flex h1{
+        color: #E20001;
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    .quem-pode-flex p{
+        color: #7A7A7A;
+        text-align: justify;
+        font-size: 15px;
+        width: 90%;
+        font-weight: 300;
+    }
+
+
+    /*Quem somos?*/
+
+    #quem-somos{
+        padding: 0px 55px;
+    }
+    
+    #quem-somos div{
+        background-color: #E20001;
+        padding: 10px 60px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        color: white;
+    }
+    
+    #quem-somos h1{
+        font-size: 45px;
+        font-weight: 400;
+        width: 500px;
+    }
+    
+    #quem-somos p{
+        font-size: 20px;
+        font-weight: 300;
+        text-align: justify;
+    }
+    
+
+    /*Aqui inicia o código do rodapé*/
+
+    footer {
+        padding: 30px 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #e20001;
+        text-align: center;
+    }
+
+    #info_rodape {
+        color: white;
+        list-style: none;
+        font-weight: 300;
+    }
+
+    #redes_sociais {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #redes_sociais i {
+        text-align: center;
+        font-size: 15px;
+        color: #e20001;
+        background-color: white;
+        height: 15px;
+        width: 15px;
+        padding: 8px;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: 0.8s;
+    }
+
+    #redes_sociais i:hover {
+        color: white;
+        background: none;
+        border: solid white 0.1px;
+        scale: 110%;
+    }
+
+    #youtube {
+        font-size: 40px;
+    }
+
+    #endereco_rodape {
+        color: white;
+        font-weight: 300;
+    }
+
 }
 
-/*Aqui inicia o código do main*/
+@media (max-width: 500px){
 
-main{
-    max-width: 100%;
-}
+    /*Aqui inicia o código do cabeçalho*/
 
-.banner{
-    width: 100%;
-    height: 620px;
-    background: url(imagem/Banner.png);
-    background-size: cover;
-    z-index: 1;
-}
+    .logotipo {
+        width: 90px;
+    }
 
-.banner_text{
-    position: absolute;
-    margin-top: 180px;
-    color: white;
-    padding: 0px 60px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    nav {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        z-index: 15;
+        width: 280px;
+        height: 100%;
+        background-color: white;
+        transition: 0.5s;
+        box-shadow: 2px 0 20px 0 rgb(0, 0, 0, 0.5);
+    }
 
-}
+    .a-nav{
+        color: #232323;
+        font-weight: 500;
+        padding: 0;
+    }
 
-.banner_text h1 {
-    font-size: 69px;
-}
+    #nav_check:checked~nav {
+        left: 0;
+    }
 
-.banner_text p {
-    font-size: 22px;
-    font-weight: 300;
-}
+    .logo2 {
+        height: 39px;
+        width: 100px;
+        background: url(img/LOGO-COLORIDO.png);
+        background-size: cover;
+    }
 
-.banner_text a {
-    color: white;
-    text-decoration: none;
-}
+    nav .logo {
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
 
-.banner_text button {
-    color: white;
-    font-size: 24px;
-    font-weight: 700;
-    width: 390px;
-    padding: 15px;
-    background: none;
-    border: solid white 2px;
-    border-radius: 50px;
-    cursor: pointer;
-}
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
 
-/*Código das doações necessárias*/
-
-.donate_container{
-    padding: 0px 60px;
-    position: relative;
-    top: -90px;
-}
-
-.donate{
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 30px;
-    padding: 30px 60px;
-    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
-}
-.donate h1{
-    color: #232323;
-    font-size: 32px;
-    font-weight: 600;
-}
-
-#ShowMore{
-    color: #9A9A9A;
-    font-size: 20px;
-    background: none;
-    border: none;
-    display: block;
-    margin: auto;
-    cursor: pointer;
-}
-
-#ShowMore i {
-    color:#7D7D7D;
-    font-size: 15px;
-}
-
-.donate_names{
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.hemocentro{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.name_adress{
-    width: 150px;
-}
-
-.name_adress a{
-    font-size: 12px;
-    color: #7D7D7D;
-}
-
-.hemocentro button{
-    font-size: 30px;
-    color: white;
-    font-weight: 600;
-    width: 80px;
-    height: 80px;
-    background-color: #e20001;
-    border-radius: 20px;
-    border: none;
-}
-
-/*Mapa*/
-
-.mapa{
-    padding: 60px;
-}
-
-#map {width: 100%; height: 450px; border: 0; }
-
-iframe{
- width: 100%;
-}
-
-/*Aqui inicia o código das pessoas*/
-
-.need_donate{
-    padding: 0px 60px;
-}
-
-.need{
-    background-color: #e20001;
-    border-radius: 50px;
-    padding: 40px 60px;;
-}
-
-.people {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 50px;
-}
-
-.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.top p{
-    font-size: 35px;
-    color: #232323;
-}
-
-.top button{
-    background: none;
-    border-radius: 100px;
-    border: solid #232323 2px;
-    padding: 15px;
-    width: 350px;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.person{
-    margin-top: 30px;
-    background-color: white;
-    border-radius: 20px;
-    padding: 0px 30px;
-}
-
-.person_info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 300px;
-    position: relative;
-    top: -55px;
-}
-
-.person img{
-    width: 100px;
-    border-radius: 120px;
-    border: solid white 5px;
-}
-
-.person h1{
-    font-size: 25px;
-    color: #232323;
-}
-
-.person p{
-    text-align: justify;
-    color: #7D7D7D;
-    font-size: 10px;
-}
-
-.person h2{
-    font-size: 30px;
-    background-color: #e20001;
-    color: white;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    border-radius: 100px;
-}
+    nav ul li {
+        padding: 10px 0;
+        width: 100%;
+        cursor: pointer;
+    }
 
 
+    .hamburguer {
+        display: block;
+        margin-right: 55px;
+    }
 
-/*Aqui inicia o código do rodapé*/
+    .login{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin: 200px 0px 0px 0px;
+    }
+    
+    #entrar a{
+        color: white;
+        text-decoration: none;
+    }
 
-footer{
-    padding: 30px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #e20001;
-}
+    #cadastro a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    #cadastro {
+        width: 230px;
+        font-size: 17px;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        background-color: #e20001;
+    }
 
-#info_rodape{
-    color: white;
-    list-style: none;
-    font-weight: 300;
-}
+    #entrar {
+        width: 230px;
+        font-size: 17px;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        background-color: #e20001;
+    }
 
-#redes_sociais{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-}
+    /*Aqui inicia o código do main*/
 
-#redes_sociais i{
-    text-align: center;
-    font-size: 45px;
-    color: #e20001;
-    background-color: white;
-    height: 45px;
-    width: 45px;
-    padding: 10px;
-    border-radius: 100px;
-}
+    main {
+        max-width: 100%;
+    }
 
-#youtube {
-    font-size: 40px;
-}
+    .banner {
+        width: 100%;
+        height: 620px;
+        background: url(imagem/Banner.png);
+        background-size: cover;
+        z-index: 1;
+    }
 
-#endereco_rodape{
-    color: white;
-    font-weight: 300;
+    .banner_text {
+        position: absolute;
+        margin-top: 180px;
+        color: white;
+        padding: 0px 55px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .banner_text h1 {
+        font-size: 40px;
+    }
+
+    .banner_text p {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .banner_text a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .banner_text button {
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        width: 300px;
+        padding: 10px;
+        background: none;
+        border: solid white 2px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    /*Código das doações necessárias*/
+
+    .donate_container {
+        padding: 0px 55px;
+        position: relative;
+        top: -90px;
+    }
+
+    .donate {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 30px;
+        padding: 30px 55px;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .donate h1 {
+        color: #232323;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    #ShowMore {
+        color: #9A9A9A;
+        font-size: 12px;
+        background: none;
+        border: none;
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #ShowMore i {
+        color: #7D7D7D;
+        font-size: 10px;
+    }
+
+    .donate_names {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hemocentro {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .name_adress {
+        width: 150px;
+    }
+
+    .name_adress a {
+        font-size: 10px;
+        color: #7D7D7D;
+    }
+
+    .hemocentro button {
+        font-size: 15px;
+        color: white;
+        font-weight: 600;
+        width: 40px;
+        height: 40px;
+        background-color: #e20001;
+        border-radius: 10px;
+        border: none;
+    }
+
+     /*Etapas*/
+
+     #etapas{
+        padding: 0px 55px 40px 55px;
+    }
+
+    #etapas h1{
+        color: #232323;
+        font-weight: 400;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .etapas-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    svg{
+        width: 60px;
+        scale: 0.8;
+    }
+
+    .etapas{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .etapas h4 {
+        font-size: 15px;
+    }
+
+    .etapas p {
+        width: 250px;
+        text-align: justify;
+        font-size: 12px;
+    }
+
+    .line{
+        display: none;
+    }
+
+
+    /*Mapa*/
+
+    .mapa {
+        padding: 55px;
+    }
+
+    #map {
+        width: 100%;
+        height: 200px;
+        border: 0;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    /*Aqui inicia o código das pessoas*/
+
+    .need_donate {
+        padding: 0px 55px;
+    }
+
+    .need {
+        background-color: #e20001;
+        border-radius: 30px;
+        padding: 0px 55px;
+    }
+
+    .people {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .top p {
+        font-size: 16px;
+        color: #232323;
+    }
+
+    .top button {
+        background: none;
+        border-radius: 100px;
+        border: solid #232323 2px;
+        padding: 10px;
+        width: 350px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .person {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 0px 30px;
+    }
+
+    .person_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 165px;
+        position: relative;
+        top: -30px;
+    }
+
+    .person img {
+        width: 50px;
+        border-radius: 120px;
+        border: solid white 5px;
+    }
+
+    .person h1 {
+        font-size: 20px;
+        color: #232323;
+    }
+
+    .person p {
+        text-align: justify;
+        color: #7D7D7D;
+        font-size: 10px;
+    }
+
+    .person h2 {
+        font-size: 20px;
+        background-color: #e20001;
+        color: white;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        border-radius: 100px;
+    }
+
+    /*Quem pode doar?*/
+
+    #quem-pode{
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .doando{
+        height: 200px;
+    }
+
+    .quem-pode-flex h1{
+        color: #E20001;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .quem-pode-flex p{
+        color: #7A7A7A;
+        text-align: justify;
+        font-size: 10px;
+        width: 77%;
+        font-weight: 300;
+    }
+
+    /*Quem somos?*/
+
+    #quem-somos{
+        padding: 0px 55px;
+    }
+    
+    #quem-somos div{
+        background-color: #E20001;
+        padding: 10px 30px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        color: white;
+    }
+    
+    #quem-somos h1{
+        font-size: 28px;
+        font-weight: 400;
+        width: 500px;
+    }
+    
+    #quem-somos p{
+        font-size: 10px;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    /*Aqui inicia o código do rodapé*/
+
+    footer {
+        padding: 30px 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #e20001;
+        text-align: center;
+    }
+
+    #info_rodape {
+        color: white;
+        list-style: none;
+        font-weight: 300;
+    }
+
+    #redes_sociais {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #redes_sociais i {
+        text-align: center;
+        font-size: 15px;
+        color: #e20001;
+        background-color: white;
+        height: 15px;
+        width: 15px;
+        padding: 8px;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: 0.8s;
+    }
+
+    #redes_sociais i:hover {
+        color: white;
+        background: none;
+        border: solid white 0.1px;
+        scale: 110%;
+    }
+
+    #youtube {
+        font-size: 40px;
+    }
+
+    #endereco_rodape {
+        color: white;
+        font-weight: 300;
+    }
+
 }

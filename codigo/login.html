@@ -16,17 +16,28 @@
 
 <body>
     <header>
-        <section id="inicio">
-            <a href="index.html"><img id="logo" src="imagem/LOGO.png"></a>
-            <ul id="header">
-                <li><a href="index.html">INÍCIO</a></li>
-                <li><a href="#">SOBRE NÓS</a></li>
-                <li><a href="#">COMO DOAR</a></li>
-                <li><a href="agendamentos.html">AGENDAR DOAÇÃO</a></li>
-                <li><a href="esqueleto_aside.html">RECEBER SANGUE</a></li>
+        <div id="img-logo">
+            <a href="index.html"><img src="img/LOGO.png" alt="logotipo" class="logotipo"></a>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <div class="logo">
+                <div class="logo2">
+                </div>
+            </div>
+            <ul>
+                <li><a class="a-nav" href="index.html">INÍCIO</a></li>
+                <li><a class="a-nav" href="esqueleto_aside.html">SOBRE NÓS</a></li>
+                <li><a class="a-nav" href="esqueleto_aside.html">QUEM PODE DOAR?</a></li>
+                <li><a class="a-nav" href="index_laura.html">AGENDAR DOAÇÃO</a></li>
+                <li><a class="a-nav" href="esqueleto_aside.html">RECEBER SANGUE</a></li>
             </ul>
-        </section>
-
+        </nav>
+        <label for="nav_check" class="hamburguer">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
     </header>
     <main>
         <section id="login">
@@ -34,7 +45,7 @@
                 <div class="login-aside">
                     <h1>Login</h1>
                     <div class="login-button">
-                        <button id="user-button"><a href="login.html">LOGIN COMO <strong>USUÁRIO</strong></a></button>
+                        <button id="user-button"><a href="login.html" class="login-b">LOGIN COMO <strong>USUÁRIO</strong></a></button>
                         <button id="hemo-button"><a href="hemo.html">LOGIN COMO <strong>HEMOCENTRO</strong></a></button>
                     </div>
                     <p>Entrar com</p>
